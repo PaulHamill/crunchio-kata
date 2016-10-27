@@ -11,8 +11,10 @@ angular.module('variableCatalog')
 
     // read order file
     $resource($scope.orderFile).get({}, function(response) {
+        // console.log(response);
         var resp = angular.fromJson(response);
         if (!resp.graph) return;
+        // parse JSON structure 'graph'
         var arr = [];
         for (var i in resp.graph) {
           var e = resp.graph[i];
@@ -20,6 +22,7 @@ angular.module('variableCatalog')
           for (var j in e) {
             if (typeof e[j] !== 'object') continue;
             arr.push({'name':j, 'value':e[j]});
+            // console.log(j+' = '+e[j]);
           }
         }
         $scope.graph = arr;
@@ -27,6 +30,7 @@ angular.module('variableCatalog')
 
     // read variables file
     $resource($scope.varFile).get({}, function(response) {
+        // console.log(response);
         var resp = angular.fromJson(response);
         if (!resp.index) return;
         // $scope.variables = resp.index;

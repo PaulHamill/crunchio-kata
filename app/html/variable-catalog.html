@@ -1,8 +1,8 @@
 <div>
   <ul>
-    <li ng-repeat="v in graph">{{ v.name }}
+    <li ng-repeat="v in graph"><a catalog-category href="#">{{ v.name }}</a>
       <ul>
-        <li ng-repeat="e in v.value">{{ v.value }}
+        <li ng-repeat="e in v.value"><a catalog-category href="#">{{ e }}</a>
         </li>
       </ul>
     </li>

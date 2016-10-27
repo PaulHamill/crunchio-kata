@@ -13,4 +13,15 @@ angular.module('variableCatalog')
                 orderFile: '&'
             }
         };
-    }]);
+    }])
+    .directive('catalogCategory', function() {
+        return {
+            require: '^variableCatalog',
+            restrict: 'A',
+            link: function(_scope, _element, _attrs) {
+                _element.bind('click', function(evt) {
+                    _element.parent().toggleClass('open');
+                });
+            }
+        };
+    });
