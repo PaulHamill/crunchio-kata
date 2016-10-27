@@ -1,0 +1,65 @@
+{
+  "name": "crunchio-kata",
+  "private": false,
+  "version": "0.1",
+  "author": "Paul Hamill <paul@empisys.com>",
+  "description": "HTML layer, Angular modules, stylesheets, and automated test suites for crunchio-kata project.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulHamill/crunchio-kata"
+  },
+  "homepage": "https://github.com/PaulHamill/crunchio-kata",
+  "bugs": {
+    "url": "https://github.com/PaulHamill/crunchio-kata/issues"
+  },
+  "license": "TBD",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "colors": "latest",
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-concat": "0.5.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-less": "0.11.4",
+    "grunt-contrib-symlink": "^0.3.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-html2js": "~0.2.9",
+    "grunt-http-server": "1.0.2",
+    "grunt-karma": "^0.12.0",
+    "grunt-protractor-runner": "^1.1.0",
+    "http-server": "^0.6.1",
+    "load-grunt-tasks": "^0.6.0",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "grunt-bump": "^0.3.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.2.6",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-safari-launcher": "^0.1.1",
+    "protractor": "~3.2.2",
+    "wd": "latest",
+    "wd-bridge": "0.0.2"
+  },
+  "engines": {
+    "node": "4.4.x",
+    "npm": "2.x"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8080",
+    "pretest": "npm install",
+    "test": "karma start test/karma.conf",
+    "pretest-single-run": "npm install",
+    "test-single-run": "karma start test/karma.conf.js --single-run",
+    "protractor-local": "protractor test/protractor-local.conf.js"
+  }
+}
