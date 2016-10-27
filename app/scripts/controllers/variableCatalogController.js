@@ -27,7 +27,6 @@ angular.module('variableCatalog')
 
     // read variables file
     $resource($scope.varFile).get({}, function(response) {
-        console.log(response);
         var resp = angular.fromJson(response);
         if (!resp.index) return;
         // $scope.variables = resp.index;
