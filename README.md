@@ -10,16 +10,19 @@ HTML layer, Angular modules, stylesheets, and automated test suites for crunch.i
 Install Node.js and npm
 [http://nodejs.org/](http://nodejs.org/)
 
-npm install
+    npm install
+
+    bower install
 
 ### Build with Grunt
 
-npm install -g grunt-cli
-grunt
+    npm install -g grunt-cli
+
+    grunt
 
 ## Run locally
 
-`grunt connect:app:keepalive` - using `app/` as the web root, at http://localhost:8001/
+`grunt connect:app:keepalive` - Run local Web server http://localhost:8001 using `app/` as web root
 
 ## Testing
 
@@ -45,6 +48,7 @@ for Angular applications.
 * the end-to-end test scenarios are found in `test/e2e/*.js`
 
     npm start
+
     npm run protractor-local
 
 
