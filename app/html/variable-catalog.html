@@ -1,8 +1,16 @@
 <div>
   <ul>
-    <li ng-repeat="v in graph"><a catalog-category href="#">{{ v.name }}</a>
+    <li ng-repeat="e in graph">
+      <a catalog-category href="#">{{ e.name }}</a>
       <ul>
-        <li ng-repeat="e in v.value"><a catalog-category href="#">{{ e }}</a>
+        <li ng-repeat="e1 in e.value">
+          <a ng-if="e1.name" catalog-category href="#">{{ e1.name }}</a>
+          <ul ng-if="e1.name">
+            <li ng-repeat="e2 in e1.value">
+              <a href="#">{{ e2 }}</a>
+            </li>
+          </ul>
+          <a ng-if="!(e1.name)" href="#">{{ e1 }}</a>
         </li>
       </ul>
     </li>

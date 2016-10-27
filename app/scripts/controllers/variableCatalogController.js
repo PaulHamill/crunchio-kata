@@ -1,7 +1,9 @@
+/* global console */
+
 'use strict';
 
 angular.module('variableCatalog')
-    .controller('VariableCatalogCtrl', ['$scope', '$window', '$resource', function($scope, $window, $resource) {
+    .controller('VariableCatalogCtrl', ['$scope', '$resource', function($scope, $resource) {
 
     $scope.graph = null;
     $scope.variables = null;
@@ -11,7 +13,7 @@ angular.module('variableCatalog')
 
     // read order file
     $resource($scope.orderFile).get({}, function(response) {
-        // console.log(response);
+        console.log(response);
         var resp = angular.fromJson(response);
         if (!resp.graph) return;
         // parse JSON structure 'graph'
@@ -21,8 +23,18 @@ angular.module('variableCatalog')
           if (typeof e !== 'object') continue;
           for (var j in e) {
             if (typeof e[j] !== 'object') continue;
-            arr.push({'name':j, 'value':e[j]});
-            // console.log(j+' = '+e[j]);
+            var arr2 = [];
+            for (var k in e[j]) {
+              var e2 = e[j][k];
+              if (Object.keys(e2).length == 1) {
+                arr2.push({'name': Object.keys(e2)[0],
+                           'value': e2[Object.keys(e2)[0]]});
+              } else {
+                arr2.push(e2);
+              }
+            }
+            arr.push({'name':j, 'value':arr2});
+            // arr.push({'name':j, 'value':arr2});
           }
         }
         $scope.graph = arr;

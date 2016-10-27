@@ -1,3 +1,5 @@
+/* global console */
+
 'use strict';
 
 angular.module('variableCatalog')

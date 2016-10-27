@@ -14,6 +14,10 @@ body {
 	min-width: 200px;
 }
 
+ul {
+	padding-left: 10px;
+}
+
 li {
 	list-style-type: none;
 }
@@ -27,7 +31,7 @@ li > a:hover {
 	color: #009;
 }
 
-li:before {
+li[ng-repeat]:before {
 	content: "›";
 	color: #999;
 	font-size: 30px;
@@ -63,7 +67,7 @@ hr {
 }
 
 .spots {
-	width: 200px;
+	width: 100%;
 	text-align: center;
 	padding: 20px;
 }
