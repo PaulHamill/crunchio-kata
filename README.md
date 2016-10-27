@@ -28,8 +28,8 @@ Install Node.js and npm
 
 ### Running Unit Tests
 
-Unit tests are written in [Jasmine][jasmine], which we run with the [Karma Test
-Runner][karma]. Karma configuration file to run them:
+Unit tests are written in Jasmine, which we run with the Karma Test
+Runner.
 
 * the configuration is found at `test/karma.conf.js`
 * the unit tests are found in `test/unit/`.
@@ -38,18 +38,20 @@ The unit tests are run using the npm script:
 
     npm test
 
+Or using grunt:
+
+    grunt karma
+
 ### End to end testing
 
-End-to-end tests, again written in [Jasmine][jasmine]. These tests are run with
-the [Protractor][protractor] End-to-End test runner.  It uses native events and has special features
-for Angular applications.
+End-to-end tests, written in Jasmine. These tests are run with
+the Protractor End-to-End test runner.
 
 * Protractor configurations are found at `test/protractor-*.js`
-* the end-to-end test scenarios are found in `test/e2e/*.js`
+* the end-to-end test cases are found in `test/e2e/*.js`
 
     npm start
 
     npm run protractor-local
-
 
  

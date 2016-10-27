@@ -8,16 +8,13 @@ describe('variableCatalog', function() {
 
     describe('variableCatalog controller', function() {
         var scope,
-            ctrl,
-            location;
+            ctrl;
 
         beforeEach(function() {
 
             inject(function($rootScope, $controller) {
                 scope = $rootScope.$new();
-                ctrl = $controller('VariableCatalog',
-                    { $scope: scope,
-                      $location: location });
+                ctrl = $controller('VariableCatalogCtrl', { $scope: scope });
             });
 
         });
@@ -26,8 +23,8 @@ describe('variableCatalog', function() {
            expect(ctrl).toBeDefined();
         });
 
-        it('should set catalog to null by default', function() {
-            expect(scope.catalog).toBe(null);
+        it('should set graph to null by default', function() {
+            expect(scope.graph).toBe(null);
         });
 
     });
