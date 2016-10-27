@@ -16,7 +16,6 @@ module.exports = function (grunt) {
         'JS_SRC': '<%= CONFIG.APP %>/scripts',
         'LESS_SRC': '<%= CONFIG.APP %>/less',
         'HTML_SRC': '<%= CONFIG.APP %>/html',
-        'VENDOR': '<%= CONFIG.APP %>/vendor',
         'PKG': grunt.file.readJSON('package.json')
     };
 
@@ -48,6 +47,31 @@ module.exports = function (grunt) {
                     '<%= CONFIG.DIST_JS %>/<%= CONFIG.PKG.name %>.js': [
                         '<%= CONFIG.JS_SRC %>/**/*.js',
                     ]
+                }
+            }
+        },
+
+        'connect': {
+            'options': {
+                'debug': true,
+                'hostname': '*'
+            },
+            'all': {
+                'options': {
+                    'base': '.',
+                    'port': 8002
+                }
+            },
+            'app': {
+                'options': {
+                    'base': '<%= CONFIG.APP %>',
+                    'port': 8001
+                }
+            },
+            'dist': {
+                'options': {
+                    'base': '<%= CONFIG.DIST %>',
+                    'port': 8000
                 }
             }
         },

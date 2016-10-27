@@ -3,11 +3,7 @@
 describe('variableCatalog', function() {
 
     beforeEach(function() {
-
         module('variableCatalog');
-
-        jasmine.addMatchers(customMatchers);
-
     });
 
     describe('variableCatalog controller', function() {
