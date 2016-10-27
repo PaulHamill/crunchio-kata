@@ -1,7 +1,7 @@
 {
-  "name": "crunchio-kata",
+  "name": "variable-catalog",
   "private": false,
-  "version": "0.1",
+  "version": "0.1.0",
   "author": "Paul Hamill <paul@empisys.com>",
   "description": "HTML layer, Angular modules, stylesheets, and automated test suites for crunchio-kata project.",
   "repository": {

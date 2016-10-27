@@ -1,6 +1,6 @@
 {
-  "name": "crunchio-kata",
-  "version": "0.1",
+  "name": "variable-catalog",
+  "version": "0.1.0",
   "homepage": "https://github.com/PaulHamill/crunchio-kata",
   "authors": [
     "Paul Hamill <paul@empisys.com>"
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "angular": "1.3.20",
-    "angular-bootstrap": "0.11.0-custom.0",
+    "angular-bootstrap": "0.14.3",
     "angular-resource": "1.3.20",
     "angular-route": "1.3.20",
     "angular-x2js": "~0.2.0",
