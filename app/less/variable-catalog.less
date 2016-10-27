@@ -2,15 +2,48 @@
 // variable-catalog.less
 //
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+[variable-catalog] {
+	margin: 10px 2px;
+	min-height: 20px;
+	width: auto;
+	min-width: 200px;
+}
+
 hr {
 	width: 100%;
 	clear: both;
 	border-color: #ccc;
 }
 
-[variable-catalog] {
-	border: 2px solid blue;
-	margin: 2px;
+.spots {
+	width: 200px;
+	text-align: center;
+	padding: 20px;
+}
+
+.spot {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 5px;
+}
+
+.spot:nth-child(1) {
+	background-color: #732082;
+}
+
+.spot:nth-child(2) {
+	background-color: #0062a6;
+}
+
+.spot:nth-child(3) {
+	background-color: #008065;
 }
 
 // MEDIAQUERIES

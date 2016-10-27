@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('variableCatalog', ['templates-variableCatalog']);
+angular.module('variableCatalog', ['ngResource','templates-variableCatalog']);

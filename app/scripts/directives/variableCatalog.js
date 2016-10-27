@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('variableCatalog')
-    .directive('blockList', ['$templateCache', function($templateCache) {
+    .directive('variableCatalog', ['$templateCache', function($templateCache) {
         return {
             restrict: 'EA',
             transclude: true,
@@ -9,7 +9,8 @@ angular.module('variableCatalog')
             controller: 'VariableCatalogCtrl',
             template: $templateCache.get('template-variable-catalog'),
             scope: {
-                file: '&'
+                varFile: '&',
+                orderFile: '&'
             }
         };
     }]);

@@ -1,4 +1,10 @@
 <div>
-  {{ catalog.name }}
-  <li ng-repeat="value in catalog.values">{{ value.code }}</li>
+  <ul>
+    <li ng-repeat="v in graph">{{ v.name }}
+      <ul>
+        <li ng-repeat="e in v.value">{{ v.value }}
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
