@@ -1,9 +1,9 @@
 <div>
   <ul>
-    <li ng-repeat="e in graph">
+    <li ng-repeat="e in graph" ng-class="{expand: e.name}">
       <a catalog-category href="#">{{ e.name }}</a>
       <ul>
-        <li ng-repeat="e1 in e.value">
+        <li ng-repeat="e1 in e.value" ng-class="{expand: e1.name}">
           <a ng-if="e1.name" catalog-category href="#">{{ e1.name }}</a>
           <ul ng-if="e1.name">
             <li ng-repeat="e2 in e1.value">
