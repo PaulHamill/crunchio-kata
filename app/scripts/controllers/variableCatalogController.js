@@ -1,5 +1,3 @@
-/* global console */
-
 'use strict';
 
 angular.module('variableCatalog')
@@ -11,9 +9,13 @@ angular.module('variableCatalog')
     $scope.varFile = $scope.varFile && $scope.varFile() || 'variables.json';
     $scope.orderFile = $scope.orderFile && $scope.orderFile() || 'order.json';
 
+    $scope.getVariable = function(key) {
+      return $scope.variables[key];
+    };
+
     // read order file
-    $resource($scope.orderFile).get({}, function(response) {
-        console.log(response);
+    var readOrder = function() {
+      $resource($scope.orderFile).get({}, function(response) {
         var resp = angular.fromJson(response);
         if (!resp.graph) return;
         // parse JSON structure 'graph'
@@ -34,18 +36,18 @@ angular.module('variableCatalog')
               }
             }
             arr.push({'name':j, 'value':arr2});
-            // arr.push({'name':j, 'value':arr2});
           }
         }
         $scope.graph = arr;
-    });
-
+      });
+    };
+  
     // read variables file
     $resource($scope.varFile).get({}, function(response) {
-        // console.log(response);
         var resp = angular.fromJson(response);
         if (!resp.index) return;
-        // $scope.variables = resp.index;
+        $scope.variables = resp.index;
+        readOrder();
     });
 
 }]);

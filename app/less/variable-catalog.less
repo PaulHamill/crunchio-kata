@@ -7,6 +7,10 @@ body {
 	background-color: white;
 }
 
+.content {
+	width: 100%;
+}
+
 [variable-catalog] {
 	margin: 10px 2px;
 	min-height: 20px;
@@ -22,11 +26,14 @@ li {
 	list-style-type: none;
 }
 
+li li {
+	padding-left: 10px;
+}
+
 li > a {
 	color: black;
 	text-decoration: none;
-	margin-left: 20px;
-	margin-top: 6px;
+	margin: 6px 0 6px 20px;
 	display: inline-block;
 }
 
@@ -35,7 +42,10 @@ li.expand > a:hover {
 }
 
 li.expand > a {
+	position: relative;
+	left: -20px;
 	margin-left: 0;
+	padding-left: 20px;
 }
 
 li.expand:before {
@@ -43,13 +53,13 @@ li.expand:before {
 	color: #999;
 	font-size: 30px;
 	height: 30px;
-	width: 30px;
+	width: 25px;
 	line-height: 20px;
 	display: inline-block;
 	text-align: center;
 	overflow: hidden;
 	position: relative;
-	top: 10px;
+	top: 12px;
 }
 
 li > ul {
@@ -69,10 +79,11 @@ li.open > ul {
 li.open:before {
 	content: "⌄";
 	font-size: 45px;
+	top: 10px;
 }
 
 hr {
-	width: 100%;
+	width: 95%;
 	clear: both;
 	border-color: #ccc;
 }

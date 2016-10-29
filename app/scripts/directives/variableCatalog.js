@@ -12,7 +12,8 @@ angular.module('variableCatalog')
             template: $templateCache.get('template-variable-catalog'),
             scope: {
                 varFile: '&',
-                orderFile: '&'
+                orderFile: '&',
+                getVariable: '&'
             }
         };
     }])
@@ -26,4 +27,20 @@ angular.module('variableCatalog')
                 });
             }
         };
-    });
+    })
+    .directive('catalogVar', ['$parse', function($parse) {
+        return {
+            require: '^variableCatalog',
+            restrict: 'A',
+            link: function(_scope, _element, _attrs) {
+                var varId = _attrs.catalogVar,
+                    v = _scope.getVariable(varId);
+                if (v && v.name) {
+                    _element.text(v.name);
+                } else {
+                    console.log('Error: variable missing/invalid: '+varId);
+                    _element.remove();
+                }
+            }
+        };
+    }]);
