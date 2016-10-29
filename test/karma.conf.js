@@ -5,8 +5,7 @@ module.exports = function (config){
 
         'basePath' : '../',
 
-        'browsers' : ['Chrome'],
-        // 'browsers' : ['Chrome', 'Firefox'],
+        'browsers' : ['Chrome', 'Firefox'],
 
         'colors': true,
 

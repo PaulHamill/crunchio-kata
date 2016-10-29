@@ -4,9 +4,9 @@ describe('variableCatalog directive', function() {
 
 	var scope, element, compile,
 	    defaultTemplate =
-          '<div variable-catalog' +
-          '  order-file="order.json"' +
-          '  var-file="variables.json"' +
+          '<div variable-catalog ' +
+          '  order-file="order.json" ' +
+          '  var-file="variables.json" ' +
           '></div>';
 
 	function createDirective(template) {
@@ -26,11 +26,11 @@ describe('variableCatalog directive', function() {
 		inject(function($rootScope, $compile, $httpBackend) {
 			scope = $rootScope.$new();
 			compile = $compile;
-      // expect call to GET order.json, return empty object
-      $httpBackend.expectGET('order.json')
-                  .respond({});
       // expect call to GET variables.json, return empty object
       $httpBackend.expectGET('variables.json')
+                  .respond({});
+      // expect call to GET order.json, return empty object
+      $httpBackend.expectGET('order.json')
                   .respond({});
 		});
 
