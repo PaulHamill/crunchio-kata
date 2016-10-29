@@ -30,7 +30,7 @@ node_modules
 
 # Bower packages
 app/vendor
-app/scripts/*.tpl.js
+# app/scripts/*.tpl.js
 
 # Built assets
-app/less/*.css
+# app/less/*.css
