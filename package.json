@@ -57,7 +57,7 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server -a localhost -p $PORT",
+    "start": "http-server ./ -p ${PORT:=80}",
     "pretest": "npm install",
     "test": "karma start test/karma.conf",
     "pretest-single-run": "npm install",
