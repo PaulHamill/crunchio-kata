@@ -3,7 +3,7 @@
 # Code sample by Paul Hamill for crunch.io
 #
 
-HTML layer, Angular modules, stylesheets, and automated test suites for crunch.io Kata code sample.
+Web UI, Javascript (Angular), CSS, and tests for Crunch Kata demo.
 
 ## Installing
 
