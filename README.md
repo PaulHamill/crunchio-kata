@@ -28,8 +28,7 @@ Install Node.js and npm
 
 ### Running Unit Tests
 
-Unit tests are written in Jasmine, which we run with the Karma Test
-Runner.
+Unit tests are written in Jasmine and run with the Karma Test Runner.
 
 * the configuration is found at `test/karma.conf.js`
 * the unit tests are found in `test/unit/`.
@@ -44,7 +43,7 @@ Or using grunt:
 
 ### End to end testing
 
-End-to-end tests, written in Jasmine. These tests are run with
+End-to-end tests are written in Jasmine and run with
 the Protractor End-to-End test runner.
 
 * Protractor configurations are found at `test/protractor-*.js`
