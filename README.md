@@ -1,6 +1,6 @@
 # crunchio-kata
 #
-# Code sample by Paul Hamill for crunch.io
+# Code sample by Paul Hamill for Crunch (crunch.io)
 #
 
 Web UI, Javascript (Angular), CSS, and tests for Crunch Kata demo.
