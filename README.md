@@ -24,9 +24,13 @@ Install Node.js and npm
 
 `grunt connect:app:keepalive` - Run local Web server http://localhost:8001 using `app/` as web root
 
+The demo page URL can be opened in your browser:
+
+    http://localhost:8001/demo/index.html
+
 ## Testing
 
-### Running Unit Tests
+### Unit Tests
 
 Unit tests are written in Jasmine and run with the Karma Test Runner.
 
@@ -41,7 +45,7 @@ Or using grunt:
 
     grunt karma
 
-### End to end testing
+### End to end tests
 
 End-to-end tests are written in Jasmine and run with
 the Protractor End-to-End test runner.
