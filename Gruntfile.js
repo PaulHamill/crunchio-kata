@@ -186,12 +186,9 @@ module.exports = function (grunt) {
             'options': {
                 'keepAlive': true
             },
-            'dist': {
+            'local': {
                 'options': {
-                    'configFile': 'test/protractor-local.conf.js',
-                    'args': {
-                        'baseUrl': 'http://localhost:8081/'
-                    }
+                    'configFile': 'test/protractor-local.conf.js'
                 }
             }
         },
@@ -232,10 +229,6 @@ module.exports = function (grunt) {
     grunt.initConfig(gruntConfig);
 
     // task entries
-
     grunt.registerTask('default', ['syntax', 'clean:app', 'less:app', 'html2js']);
     grunt.registerTask('syntax', ['jshint']);
-    grunt.registerTask('stage', ['default', 'clean:dist', 'copy:dist', 'concat:dist', 'less:dist', 'copy:dist', 'uglify:dist']);
-
-    // grunt.registerTask('test-dist', ['http-server:dist', 'protractor:dist']);
 };

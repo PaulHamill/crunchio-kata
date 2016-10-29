@@ -50,8 +50,8 @@ the Protractor End-to-End test runner.
 * Protractor configurations are found at `test/protractor-*.js`
 * the end-to-end test cases are found in `test/e2e/*.js`
 
-    npm start
+    grunt connect:app:keepalive
 
-    npm run protractor-local
+    grunt protractor:local
 
  
