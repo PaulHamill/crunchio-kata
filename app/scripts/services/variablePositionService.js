@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('variableCatalog')
-       .service('variablePositionService', ['$filter', function($filter) {
+       .service('variablePositionService', function() {
            this.getPosition = function(vars, key) {
                var i = 0;
                for (var v in vars) {
@@ -10,4 +10,4 @@ angular.module('variableCatalog')
                }
                return -1; // not found
            };
-       }]);
+       });
