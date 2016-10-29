@@ -26,7 +26,7 @@ Install Node.js and npm
 
 The demo page URL can be opened in your browser:
 
-    http://localhost:8001/demo/index.html
+    [http://localhost:8001/demo/index.html](http://localhost:8001/demo/index.html)
 
 ## Testing
 
