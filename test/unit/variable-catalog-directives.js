@@ -35,8 +35,9 @@ describe('variableCatalog directive', function() {
 		});
 
 		element = createDirective();
-    // scope.$$childHead is expected to be VariableCatalogCtrl scope
+    // scope.$$childHead is VariableCatalogCtrl scope
 		scope = element.scope().$$childHead;
+
 	});
 
 	it('should set scope attributes', function() {
@@ -44,6 +45,7 @@ describe('variableCatalog directive', function() {
     expect(scope.orderFile).toBe('order.json');
     expect(scope.varFile).toBe('variables.json');
     expect(scope.graph).toBe(null);
+    expect(scope.variables).toBe(null);
 	});
 
 });
