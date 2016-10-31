@@ -59,7 +59,7 @@ li.expand:before {
 	text-align: center;
 	overflow: hidden;
 	position: relative;
-	top: 12px;
+	top: 10px;
 }
 
 li > ul {
@@ -130,5 +130,11 @@ p {
 }
 
 // MEDIAQUERIES
-@media print {
+@media desktop {
+	li.expand:before {
+		top: 12px;
+	}
+	li.open:before {
+		font-size: 45px;
+	}
 }
